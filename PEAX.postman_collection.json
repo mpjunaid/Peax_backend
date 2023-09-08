@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "7da4da1e-a311-4b16-b694-cb34a03a4a5e",
+		"name": "PEAX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7866545"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"d\",\r\n    \"email\": \"c@a.com\",\r\n    \"password\": \"d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/register/"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"c@a.com\",\r\n    \"password\": \"d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "UserFind",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8000/api/logout/"
+			},
+			"response": []
+		},
+		{
+			"name": "Viewplants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/api/plants/"
+			},
+			"response": []
+		},
+		{
+			"name": "Adding plants",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rose\",\r\n    \"description\": \"Classic red rose\",\r\n    \"price\": 5.99,\r\n    \"stock\": 100,\r\n    \"supplier\": \"Greenhouse X\",\r\n    \"category\": \"Flowers\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/plantAdd/"
+			},
+			"response": []
+		},
+		{
+			"name": "Editing plants",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "localhost:8000/api/plantAdd/"
+			},
+			"response": []
+		}
+	]
+}
