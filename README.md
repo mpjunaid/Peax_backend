@@ -1,11 +1,11 @@
-# PEAX Backend deployment instruction
+# PEAX Backend Deployment Instructions
 
-The following are the requiremnt for the prerequsite for the deploymnet of the application
+To successfully deploy the PEAX application backend, ensure you meet the following prerequisites:
 
-1. git
-2. python
+1. Git
+2. Python
 
-after you have these to files follow the intructions as below
+Once you have these prerequisites in place, follow the instructions below for deployment.
 
 ## Deploying the Django Server
 
@@ -13,7 +13,6 @@ after you have these to files follow the intructions as below
 
 ```bash
 git clone https://github.com/mpjunaid/Peax_backend.git
-
 cd Peax_backend
 ```
 
@@ -21,7 +20,7 @@ cd Peax_backend
 
 ```bash
 python -m venv venv
-venv\Scripts\activate  # Use 'source venv/bin/activate' on Unix-based systems
+source venv/bin/activate  # Use 'venv\Scripts\activate' on Windows
 ```
 
 ### Step 3: Install Python Dependencies
@@ -41,3 +40,17 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
+
+The hosted backend will be available at the following URL:
+
+http://localhost:8000
+
+## Project Backend Documentation
+
+The backend primarily operates as an API, with detailed API documentation provided for testing in Postman. You can find the Postman collection file named "PEAX.postman_collection" in the project folder.
+
+Authentication in the backend is implemented using JSON Web Tokens (JWT), where the username (i.e., email) and password are hashed and stored in the database. The authentication process utilizes server-side sessions, and a cookie is sent to the frontend browser.
+
+Password and email validation is enforced; for example, passwords must include at least one lowercase letter, one uppercase letter, one digit, and one special character.
+
+Additionally, the backend performs input validation for various data types, both on the backend and frontend sides.
