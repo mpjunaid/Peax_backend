@@ -35,6 +35,8 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
+In this github repository there is sqlite file which is already populated with some sample data and the migrate step can be skipped
+
 ### Step 5: Run the Django Server
 
 ```bash
